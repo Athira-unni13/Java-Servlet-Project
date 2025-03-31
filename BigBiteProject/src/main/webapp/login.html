@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<script>
+	function validateFields() {
+		if (document.signin.username.value == "") {
+			alert("Please enter your username");
+			document.signin.username.focus();
+			return false;
+		}
+		if (document.signin.password.value == "") {
+			alert("Please enter your password");
+			document.signin.password.focus();
+			return false;
+		}
+
+		document.signin.submit();
+
+	}
+</script>
+<link rel="stylesheet" type="text/css" href="asserts/css/style.css"/>
+</head>
+<body>
+	<h1>Sign In</h1>
+	<form name="login" method="post" action="signin">
+		<label> Username </label><input type="text" name="username"><br><br> 
+		<label> Password </label><input type="password" name="password"><br> <br> 
+		<input type="submit" class="inputbutton" value="Login" onclick="return validateFields();" />
+	</form>
+</body>
+</html>

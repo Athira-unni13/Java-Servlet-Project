@@ -1,0 +1,45 @@
+@charset "ISO-8859-1";
+
+h1{
+	text-align: center;
+}
+form{
+	width: 500px; /* Set a fixed width */
+    margin: auto; /* Centers the form horizontally */
+    text-align: center; /* Centers text inside */
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+table  {
+	margin: auto; /* Centers the table */
+	border-collapse: collapse;
+	width: 50%; /* Adjust width as needed */
+	text-align: center;}
+th, td {
+          border: 1px solid black;
+          padding: 10px;
+        }
+button{
+  background-color: #04AA6D; /* Green */
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.inputbutton{
+  background-color: #04AA6D; /* Green */
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}

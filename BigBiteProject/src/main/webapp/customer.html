@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome</title>
+<script>
+ function setAction(value){
+	 document.getElementById('action').value = value;
+	 document.customer.submit();
+ }
+</script>
+<link rel="stylesheet" type="text/css" href="asserts/css/style.css"/>
+</head>
+<body>
+<h1>Enter Details:</h1>
+<form name="customer" method="post" action="addcustomer">
+	<label>Name &nbsp;&nbsp;</label><input type="text" name="cname" placeholder="Enter username"/><br><br>
+	<label>Address &nbsp;&nbsp;</label><textarea name="caddress" rows="4" cols="50"></textarea><br><br>
+	<label>Enter Phone number &nbsp;&nbsp;</label>
+	<input type="tel" name="cphone" placeholder="123-4567-890" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}"/> <small>Format: 123-4567-890</small><br><br>
+	<label>Email &nbsp;&nbsp;</label><input type="email" name="cemail"/><br><br>
+	<input type="hidden" name="action" id="action" value="saveOnly">
+	<input type="submit" class="inputbutton" value="Save Customer" onclick="setAction('saveOnly');"/>
+    <input type="submit" class="inputbutton" value="Save And Continue" onclick="setAction('saveAndContinue');"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome</title>
+<script>
+    function toggleFields() {
+        var staffRole = document.getElementById("srole").value.toLowerCase().trim();
+        var extraFields = document.getElementById("extraFields");
+
+        if (staffRole === "admin" || staffRole === "back officer") {
+            extraFields.style.display = "block"; // Show fields if role is admin or back officer
+        } else {
+            extraFields.style.display = "none"; // Hide fields otherwise
+        }
+    }
+</script>
+<link rel="stylesheet" type="text/css" href="asserts/css/style.css"/>
+</head>
+<body>
+<h1>Enter Details:</h1>
+<form name="staff" method="post" action="addstaff">
+    <label>Staff Name &nbsp;&nbsp;</label>
+    <input type="text" name="sname" placeholder="Enter username"/><br><br>
+
+    <label>Staff Address &nbsp;&nbsp;</label>
+    <textarea name="saddress" rows="4" cols="50"></textarea><br><br>
+
+    <label>Phone number &nbsp;&nbsp;</label>
+    <input type="tel" name="sphone" placeholder="123-4567-890" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}"/> 
+    <small>Format: 123-4567-890</small><br><br>
+
+    <label>Email &nbsp;&nbsp;</label>
+    <input type="email" name="semail"/><br><br>
+
+    <label>Salary &nbsp;&nbsp;</label>
+    <input type="text" name="ssalary"/><br><br>
+
+    <label>Staff Role &nbsp;&nbsp;</label>
+    <input type="text" id="srole" name="srole" onkeyup="toggleFields();" placeholder="Enter role"/><br><br>
+
+    <!-- Hidden fields initially -->
+    <div id="extraFields" style="display: none;">
+        <label>Username &nbsp;&nbsp;</label>
+        <input id="uname" type="text" name="uname"/><br><br>
+
+        <label>Password &nbsp;&nbsp;</label>
+        <input id="upassword" type="password" name="upassword"/><br><br>
+    </div>
+
+    <input type="submit" class="inputbutton" value="Add Staff"/>
+</form>
+</body>
+</html>
